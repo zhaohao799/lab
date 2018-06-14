@@ -6,6 +6,8 @@
 //
 
 #import "AppDelegate.h"
+#import "EntryViewController.h"
+#import "ShareViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,6 +18,20 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    EntryViewController *entryVC = [[EntryViewController alloc] init];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:entryVC];
+    UITabBarController *tabController = [[UITabBarController alloc] init];
+    ShareViewController *shareVC = [[ShareViewController alloc] init];
+    [tabController setViewControllers:@[shareVC, nav]];
+    [tabController setTabBarItem:[[UITabBarItem alloc] initWithTitle:@"SHARE" image:nil tag:0]];
+    [tabController setTabBarItem:[[UITabBarItem alloc] initWithTitle:@"NAV" image:nil tag:1]];
+    tabController.tabBar.tintColor = [UIColor blueColor];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.rootViewController = tabController;
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
