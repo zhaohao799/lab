@@ -4,10 +4,38 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Lab Enterprise.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
 		<key>Lab.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>3</integer>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>3F3DEE3D20D902E200C1A28F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3FD0A51E20B808E300412448</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3FD0A53620B808E300412448</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3FD0A54120B808E300412448</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Lab.ipa</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>armv7</string>
+				<string>arm64</string>
+			</array>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>78A1A1E226A9DAB9879FD45976935379D8173D4D</string>
+				<key>dateExpires</key>
+				<string>2019/3/7</string>
+				<key>type</key>
+				<string>iOS Development</string>
+			</dict>
+			<key>entitlements</key>
+			<dict>
+				<key>application-identifier</key>
+				<string>9C8439L29Q.fun.owr.cfm.Lab</string>
+				<key>com.apple.developer.team-identifier</key>
+				<string>9C8439L29Q</string>
+				<key>get-task-allow</key>
+				<true/>
+				<key>keychain-access-groups</key>
+				<array>
+					<string>9C8439L29Q.fun.owr.cfm.Lab</string>
+				</array>
+			</dict>
+			<key>name</key>
+			<string>Lab.app</string>
+			<key>profile</key>
+			<dict>
+				<key>UUID</key>
+				<string>8a3a97b1-50fa-43d5-983d-1de1da87e6af</string>
+				<key>name</key>
+				<string>wang xu wild test for miguzhibo</string>
+			</dict>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>9C8439L29Q</string>
+				<key>name</key>
+				<string></string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

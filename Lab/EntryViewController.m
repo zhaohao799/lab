@@ -11,6 +11,14 @@
 #import "ShareViewController.h"
 #import "InvocationViewController.h"
 
+#ifdef DEBUG
+#define ENTRY_TITLE @"Entry"
+#elif TEST
+#define ENTRY_TITLE @"Title"
+#else
+#define ENTRY_TITLE @"Entry Title"
+#endif
+
 @interface EntryViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, copy) NSArray<NSString *> *dataArray;
@@ -23,6 +31,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.title = ENTRY_TITLE;
     self.dataArray = @[@"share test", @"invocation"];
     
     self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 100, 100) style:UITableViewStylePlain];

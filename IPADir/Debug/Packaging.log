@@ -1,0 +1,155 @@
+2018-06-20 06:01:18 +0000 [MT] Initial pipeline context: <IDEDistributionProcessingPipelineContext: 0x7fd3795f1030; archive(resolved)='<IDEArchive: 0x7fd37970b7d0>', distributionTask(resolved)='2', distributionMethod(resolved)='<IDEDistributionMethodDevelopmentSigned: 0x7fd3792c6e90>', team(resolved)='<IDEProvisioningBasicTeam: 0x7fd3792b6020; teamID='9C8439L29Q', teamName='(null)'>'>
+	Chain (11, self inclusive):
+	<IDEDistributionProcessingPipelineContext: 0x7fd3795f1030; archive = '<IDEArchive: 0x7fd37970b7d0>', distributionMethod='<IDEDistributionMethodDevelopmentSigned: 0x7fd3792c6e90>', team='<IDEProvisioningBasicTeam: 0x7fd3792b6020; teamID='9C8439L29Q', teamName='(null)'>'>
+	<IDEDistributionProcessingPipelineContext: 0x7fd3795dea70; archive = '<IDEArchive: 0x7fd37970b7d0>', distributionMethod='<IDEDistributionMethodDevelopmentSigned: 0x7fd3792c6e90>', team='<IDEProvisioningBasicTeam: 0x7fd3792b6020; teamID='9C8439L29Q', teamName='(null)'>'>
+	<IDEDistributionContext: 0x7fd379812f10; archive = '<IDEArchive: 0x7fd37970b7d0>', distributionMethod='<IDEDistributionMethodDevelopmentSigned: 0x7fd3792c6e90>', team='<IDEProvisioningBasicTeam: 0x7fd3792b6020; teamID='9C8439L29Q', teamName='(null)'>'>
+	<IDEDistributionContext: 0x7fd3795eeba0; archive = '<IDEArchive: 0x7fd37970b7d0>', distributionMethod='<IDEDistributionMethodDevelopmentSigned: 0x7fd3792c6e90>', team='<IDEProvisioningBasicTeam: 0x7fd3792b6020; teamID='9C8439L29Q', teamName='(null)'>'>
+	<IDEDistributionContext: 0x7fd37980a750; archive = '<IDEArchive: 0x7fd37970b7d0>', distributionMethod='<IDEDistributionMethodDevelopmentSigned: 0x7fd3792c6e90>', team='<IDEProvisioningBasicTeam: 0x7fd3792b6020; teamID='9C8439L29Q', teamName='(null)'>'>
+	<IDEDistributionContext: 0x7fd379808f90; archive = '<IDEArchive: 0x7fd37970b7d0>', distributionMethod='<IDEDistributionMethodDevelopmentSigned: 0x7fd3792c6e90>', team='<IDEProvisioningBasicTeam: 0x7fd3792b6020; teamID='9C8439L29Q', teamName='(null)'>'>
+	<IDEDistributionContext: 0x7fd3795dffe0; archive = '<IDEArchive: 0x7fd37970b7d0>', distributionMethod='<IDEDistributionMethodDevelopmentSigned: 0x7fd3792c6e90>', team='<IDEProvisioningBasicTeam: 0x7fd3792b6020; teamID='9C8439L29Q', teamName='(null)'>'>
+	<IDEDistributionContext: 0x7fd3795e21c0; archive = '<IDEArchive: 0x7fd37970b7d0>', distributionMethod='<IDEDistributionMethodDevelopmentSigned: 0x7fd3792c6e90>', team='<IDEProvisioningBasicTeam: 0x7fd3792b6020; teamID='9C8439L29Q', teamName='(null)'>'>
+	<IDEDistributionContext: 0x7fd37972a300; archive = '<IDEArchive: 0x7fd37970b7d0>', distributionMethod='<IDEDistributionMethodDevelopmentSigned: 0x7fd3792c6e90>', team='<IDEProvisioningBasicTeam: 0x7fd3792b6020; teamID='9C8439L29Q', teamName='(null)'>'>
+	<IDEDistributionContext: 0x7fd3792b7ca0; archive = '<IDEArchive: 0x7fd37970b7d0>', distributionMethod='<IDEDistributionMethodDevelopmentSigned: 0x7fd3792c6e90>', team='(null)'>
+	<IDEDistributionContext: 0x7fd37970bfc0; archive = '<IDEArchive: 0x7fd37970b7d0>', distributionMethod='(null)', team='(null)'>
+</IDEDistributionProcessingPipelineContext: 0x7fd3795f1030>
+2018-06-20 06:01:18 +0000 [MT] Processing step: IDEDistributionCreateDestRootStep
+2018-06-20 06:01:18 +0000 [MT] Processing step: IDEDistributionCopyItemStep
+2018-06-20 06:01:18 +0000 [MT] Running /usr/bin/ditto '-V' '/Users/hao/workspace/Lab/build/Lab.xcarchive/Products/Applications/Lab.app' '/var/folders/mc/kys4vwg52rl_7kls5mmzpcwm0000gn/T/XcodeDistPipeline.jFa/Root/Payload/Lab.app'
+2018-06-20 06:01:18 +0000  >>> Copying /Users/hao/workspace/Lab/build/Lab.xcarchive/Products/Applications/Lab.app 
+2018-06-20 06:01:18 +0000  copying file ./_CodeSignature/CodeResources ... 
+2018-06-20 06:01:18 +0000  4529 bytes for ./_CodeSignature/CodeResources
+2018-06-20 06:01:18 +0000  copying file ./AppIcon60x60@2x.png ... 
+2018-06-20 06:01:18 +0000  10675 bytes for ./AppIcon60x60@2x.png
+copying file ./AppIcon60x60@3x.png ... 
+2018-06-20 06:01:18 +0000  20192 bytes for ./AppIcon60x60@3x.png
+2018-06-20 06:01:18 +0000  copying file ./Assets.car ... 
+2018-06-20 06:01:18 +0000  96776 bytes for ./Assets.car
+copying file ./embedded.mobileprovision ... 
+2018-06-20 06:01:18 +0000  58134 bytes for ./embedded.mobileprovision
+2018-06-20 06:01:18 +0000  copying file ./Info.plist ... 
+2018-06-20 06:01:18 +0000  1258 bytes for ./Info.plist
+copying file ./Lab ... 
+2018-06-20 06:01:18 +0000  5529120 bytes for ./Lab
+2018-06-20 06:01:18 +0000  
+2018-06-20 06:01:18 +0000 [MT] /usr/bin/ditto exited with 02018-06-20 06:01:18 +0000  copying file ./Launch Screen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib ... 
+3575 bytes for ./Launch Screen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib
+copying file ./Launch Screen.storyboardc/Info.plist ... 
+258 bytes for ./Launch Screen.storyboardc/Info.plist
+copying file ./Launch Screen.storyboardc/UIViewController-01J-lp-oVM.nib ... 
+832 bytes for ./Launch Screen.storyboardc/UIViewController-01J-lp-oVM.nib
+copying file ./PkgInfo ... 
+8 bytes for ./PkgInfo
+
+2018-06-20 06:01:18 +0000  
+2018-06-20 06:01:18 +0000  
+2018-06-20 06:01:18 +0000 [MT] Processing step: IDEDistributionEmbedProfileStep
+2018-06-20 06:01:18 +0000 [MT] Processing step: IDEDistributionAppThinningPlistStep
+2018-06-20 06:01:18 +0000 [MT] Skipping step: IDEDistributionAppThinningPlistStep because it said so
+2018-06-20 06:01:18 +0000 [MT] Processing step: IDEDistributionCompileBitcodeStep
+2018-06-20 06:01:18 +0000 [MT] Skipping step: IDEDistributionCompileBitcodeStep because it said so
+2018-06-20 06:01:18 +0000 [MT] Processing step: IDEDistributionCodeSlimmingStep
+2018-06-20 06:01:18 +0000 [MT] Processing step: IDEDistributionCopyBCSymbolMapsStep
+2018-06-20 06:01:18 +0000 [MT] Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2018-06-20 06:01:18 +0000 [MT] Processing step: IDEDistributionSymbolsStep
+2018-06-20 06:01:18 +0000 [MT] Skipping step: IDEDistributionSymbolsStep because it said so
+2018-06-20 06:01:18 +0000 [MT] Processing step: IDEDistributionAppThinningStep
+2018-06-20 06:01:18 +0000 [MT] Skipping step: IDEDistributionAppThinningStep because it said so
+2018-06-20 06:01:18 +0000 [MT] Processing step: IDEDistributionODRStep
+2018-06-20 06:01:18 +0000 [MT] Processing step: IDEDistributionStripXattrsStep
+2018-06-20 06:01:18 +0000 [MT] Running /usr/bin/xattr '-crs' '/var/folders/mc/kys4vwg52rl_7kls5mmzpcwm0000gn/T/XcodeDistPipeline.jFa/Root/Payload/Lab.app'
+2018-06-20 06:01:18 +0000  
+2018-06-20 06:01:18 +0000  
+2018-06-20 06:01:18 +0000 [MT] /usr/bin/xattr exited with 02018-06-20 06:01:18 +0000  
+
+2018-06-20 06:01:18 +0000  
+2018-06-20 06:01:18 +0000  
+2018-06-20 06:01:18 +0000 [MT] Processing step: IDEDistributionCodesignStep
+2018-06-20 06:01:18 +0000 [MT] Entitlements for <IDEDistributionItem: 0x7fd379765070 'fun.owr.cfm.Lab' '<DVTFilePath:0x7fd37970baf0:'/Users/hao/workspace/Lab/build/Lab.xcarchive/Products/Applications/Lab.app'>'>: {
+    "application-identifier" = "9C8439L29Q.fun.owr.cfm.Lab";
+    "com.apple.developer.team-identifier" = 9C8439L29Q;
+    "get-task-allow" = 1;
+    "keychain-access-groups" =     (
+        "9C8439L29Q.fun.owr.cfm.Lab"
+    );
+}
+2018-06-20 06:01:18 +0000 [MT] Writing entitlements for <IDEDistributionItem: 0x7fd379765070 'fun.owr.cfm.Lab' '<DVTFilePath:0x7fd37970baf0:'/Users/hao/workspace/Lab/build/Lab.xcarchive/Products/Applications/Lab.app'>'> to: /var/folders/mc/kys4vwg52rl_7kls5mmzpcwm0000gn/T/XcodeDistPipeline.jFa/entitlementssuHC9p
+2018-06-20 06:01:18 +0000 [MT] Running /usr/bin/codesign '-vvv' '--force' '--sign' '78A1A1E226A9DAB9879FD45976935379D8173D4D' '--preserve-metadata=identifier,flags' '--entitlements' '/var/folders/mc/kys4vwg52rl_7kls5mmzpcwm0000gn/T/XcodeDistPipeline.jFa/entitlementssuHC9p' '/var/folders/mc/kys4vwg52rl_7kls5mmzpcwm0000gn/T/XcodeDistPipeline.jFa/Root/Payload/Lab.app'
+2018-06-20 06:01:19 +0000  /var/folders/mc/kys4vwg52rl_7kls5mmzpcwm0000gn/T/XcodeDistPipeline.jFa/Root/Payload/Lab.app: signed app bundle with Mach-O universal (armv7 arm64) [fun.owr.cfm.Lab]
+2018-06-20 06:01:19 +0000  
+2018-06-20 06:01:19 +0000  
+2018-06-20 06:01:19 +0000  
+2018-06-20 06:01:19 +0000  
+2018-06-20 06:01:19 +0000  
+2018-06-20 06:01:19 +0000  
+2018-06-20 06:01:19 +0000  
+2018-06-20 06:01:19 +0000  
+2018-06-20 06:01:19 +0000  
+2018-06-20 06:01:19 +0000  
+2018-06-20 06:01:19 +0000  
+2018-06-20 06:01:19 +0000  
+2018-06-20 06:01:19 +0000  
+2018-06-20 06:01:19 +0000  
+2018-06-20 06:01:19 +0000  
+2018-06-20 06:01:19 +0000  
+2018-06-20 06:01:19 +0000  
+2018-06-20 06:01:19 +0000  
+2018-06-20 06:01:19 +0000  
+2018-06-20 06:01:19 +0000  
+2018-06-20 06:01:19 +0000  
+2018-06-20 06:01:19 +0000  
+2018-06-20 06:01:19 +0000  
+2018-06-20 06:01:19 +0000  
+2018-06-20 06:01:19 +0000  
+2018-06-20 06:01:19 +0000  
+2018-06-20 06:01:19 +0000  
+2018-06-20 06:01:19 +0000  
+2018-06-20 06:01:19 +0000  
+2018-06-20 06:01:19 +0000  
+2018-06-20 06:01:19 +0000  
+2018-06-20 06:01:19 +0000  
+2018-06-20 06:01:19 +0000  
+2018-06-20 06:01:19 +0000  
+2018-06-20 06:01:19 +0000  
+2018-06-20 06:01:19 +0000  
+2018-06-20 06:01:19 +0000  
+2018-06-20 06:01:19 +0000  
+2018-06-20 06:01:19 +0000  
+2018-06-20 06:01:19 +0000  
+2018-06-20 06:01:19 +0000  
+2018-06-20 06:01:19 +0000  
+2018-06-20 06:01:19 +0000 [MT] /usr/bin/codesign exited with 0
+2018-06-20 06:01:19 +0000  
+2018-06-20 06:01:19 +0000  
+2018-06-20 06:01:19 +0000 [MT] Processing step: IDEDistributionStreamingZipItemStep
+2018-06-20 06:01:19 +0000 [MT] Skipping step: IDEDistributionStreamingZipItemStep because it said so
+2018-06-20 06:01:19 +0000 [MT] Processing step: IDEDistributionCreateIPAStep
+2018-06-20 06:01:19 +0000 [MT] Running /usr/bin/ditto '-V' '-c' '-k' '--norsrc' '/var/folders/mc/kys4vwg52rl_7kls5mmzpcwm0000gn/T/XcodeDistPipeline.jFa/Root' '/var/folders/mc/kys4vwg52rl_7kls5mmzpcwm0000gn/T/XcodeDistPipeline.jFa/Packages/Lab.ipa'
+2018-06-20 06:01:19 +0000  >>> Copying /var/folders/mc/kys4vwg52rl_7kls5mmzpcwm0000gn/T/XcodeDistPipeline.jFa/Root 
+2018-06-20 06:01:19 +0000  copying file ./Payload/Lab.app/_CodeSignature/CodeResources ... 
+2018-06-20 06:01:19 +0000  4529 bytes for ./Payload/Lab.app/_CodeSignature/CodeResources
+copying file ./Payload/Lab.app/AppIcon60x60@2x.png ... 
+2018-06-20 06:01:19 +0000  10675 bytes for ./Payload/Lab.app/AppIcon60x60@2x.png
+copying file ./Payload/Lab.app/AppIcon60x60@3x.png ... 
+2018-06-20 06:01:19 +0000  20192 bytes for ./Payload/Lab.app/AppIcon60x60@3x.png
+2018-06-20 06:01:19 +0000  copying file ./Payload/Lab.app/Assets.car ... 
+2018-06-20 06:01:19 +0000  96776 bytes for ./Payload/Lab.app/Assets.car
+copying file ./Payload/Lab.app/embedded.mobileprovision ... 
+2018-06-20 06:01:19 +0000  58134 bytes for ./Payload/Lab.app/embedded.mobileprovision
+copying file ./Payload/Lab.app/Info.plist ... 
+2018-06-20 06:01:19 +0000  1258 bytes for ./Payload/Lab.app/Info.plist
+copying file ./Payload/Lab.app/Lab ... 
+2018-06-20 06:01:19 +0000  1143520 bytes for ./Payload/Lab.app/Lab
+2018-06-20 06:01:19 +0000  copying file ./Payload/Lab.app/Launch Screen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib ... 
+2018-06-20 06:01:19 +0000  3575 bytes for ./Payload/Lab.app/Launch Screen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib
+copying file ./Payload/Lab.app/Launch Screen.storyboardc/Info.plist ... 
+258 bytes for ./Payload/Lab.app/Launch Screen.storyboardc/Info.plist
+copying file ./Payload/Lab.app/Launch Screen.storyboardc/UIViewController-01J-lp-oVM.nib ... 
+2018-06-20 06:01:19 +0000  832 bytes for ./Payload/Lab.app/Launch Screen.storyboardc/UIViewController-01J-lp-oVM.nib
+copying file ./Payload/Lab.app/PkgInfo ... 
+2018-06-20 06:01:19 +0000  8 bytes for ./Payload/Lab.app/PkgInfo
+2018-06-20 06:01:19 +0000  
+2018-06-20 06:01:19 +0000  
+2018-06-20 06:01:19 +0000 [MT] /usr/bin/ditto exited with 0
+2018-06-20 06:01:19 +0000  
+2018-06-20 06:01:19 +0000  
+2018-06-20 06:01:19 +0000 [MT] Processing step: IDEDistributionCreateManifestStep

@@ -8,6 +8,7 @@
 #import "AppDelegate.h"
 #import "EntryViewController.h"
 #import "ShareViewController.h"
+#import "ImageViewController.h"
 
 @interface AppDelegate ()
 
@@ -21,11 +22,27 @@
     
     EntryViewController *entryVC = [[EntryViewController alloc] init];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:entryVC];
+    nav.title = @"nav";
     UITabBarController *tabController = [[UITabBarController alloc] init];
     ShareViewController *shareVC = [[ShareViewController alloc] init];
-    [tabController setViewControllers:@[shareVC, nav]];
-    [tabController setTabBarItem:[[UITabBarItem alloc] initWithTitle:@"SHARE" image:nil tag:0]];
-    [tabController setTabBarItem:[[UITabBarItem alloc] initWithTitle:@"NAV" image:nil tag:1]];
+    shareVC.title = @"share";
+    ImageViewController *imageVC = [[ImageViewController alloc] init];
+    imageVC.title = @"image";
+    
+    NSMutableArray *controllerArray = [NSMutableArray arrayWithCapacity:3];
+    [controllerArray addObject:shareVC];
+    [controllerArray addObject:nav];
+    [controllerArray addObject:imageVC];
+    
+//    for (int index = 0; index < 5; index++) {
+//        UIViewController *vc = [[UIViewController alloc] init];
+//        vc.title = [NSString stringWithFormat:@"%d vc", index];
+//        vc.view.backgroundColor = [UIColor yellowColor];
+//        [controllerArray addObject:vc];
+//    }
+    
+    
+    [tabController setViewControllers:controllerArray];
     tabController.tabBar.tintColor = [UIColor blueColor];
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];

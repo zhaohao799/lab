@@ -83,7 +83,7 @@
 }
 
 - (UIInterfaceOrientationMask)tabBarControllerSupportedInterfaceOrientations:(UITabBarController *)tabBarController {
-    return UIInterfaceOrientationMaskPortrait;
+    return UIInterfaceOrientationMaskAllButUpsideDown;
 }
 
 @end
