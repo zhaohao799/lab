@@ -157,6 +157,13 @@
 			path = cornerradius;
 			sourceTree = "<group>";
 		};
+		3F1640A521115C160007ECFA /* shortVideo */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = shortVideo;
+			sourceTree = "<group>";
+		};
 		3FD0A51620B808E300412448 = {
 			isa = PBXGroup;
 			children = (
@@ -230,6 +237,7 @@
 		3FD0A92520C52F4600412448 /* Lab */ = {
 			isa = PBXGroup;
 			children = (
+				3F1640A521115C160007ECFA /* shortVideo */,
 				3F164098211064F60007ECFA /* cornerradius */,
 				3FD0A92920C52FCF00412448 /* invocation */,
 			);
