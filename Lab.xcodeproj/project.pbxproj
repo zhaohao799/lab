@@ -13,6 +13,16 @@
 		3F1640A0211080D00007ECFA /* UIImageView+LabAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F16409E211080D00007ECFA /* UIImageView+LabAddition.m */; };
 		3F1640A3211083190007ECFA /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1640A2211083190007ECFA /* ImageViewController.m */; };
 		3F1640A4211083190007ECFA /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1640A2211083190007ECFA /* ImageViewController.m */; };
+		3F1640A92112C6C00007ECFA /* UIAlertController+LabAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1640A82112C6C00007ECFA /* UIAlertController+LabAddition.m */; };
+		3F1640AA2112C6C00007ECFA /* UIAlertController+LabAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1640A82112C6C00007ECFA /* UIAlertController+LabAddition.m */; };
+		3F1640AD211304080007ECFA /* MGTVideoEditorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1640AC211304080007ECFA /* MGTVideoEditorController.m */; };
+		3F1640AE211304080007ECFA /* MGTVideoEditorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1640AC211304080007ECFA /* MGTVideoEditorController.m */; };
+		3F1640B1211306B90007ECFA /* MGTActionBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1640B0211306B90007ECFA /* MGTActionBar.m */; };
+		3F1640B2211306B90007ECFA /* MGTActionBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1640B0211306B90007ECFA /* MGTActionBar.m */; };
+		3F1640B5211306D20007ECFA /* MGTActionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1640B4211306D20007ECFA /* MGTActionItem.m */; };
+		3F1640B6211306D20007ECFA /* MGTActionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1640B4211306D20007ECFA /* MGTActionItem.m */; };
+		3F1640B9211321520007ECFA /* UIResponder+LabAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1640B8211321520007ECFA /* UIResponder+LabAddition.m */; };
+		3F1640BA211321520007ECFA /* UIResponder+LabAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1640B8211321520007ECFA /* UIResponder+LabAddition.m */; };
 		3F3DEE4020D902E200C1A28F /* InvocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD0A92B20C52FCF00412448 /* InvocationViewController.m */; };
 		3F3DEE4120D902E200C1A28F /* WCShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD0A55820B80BF200412448 /* WCShareView.m */; };
 		3F3DEE4220D902E200C1A28F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD0A53120B808E300412448 /* main.m */; };
@@ -61,6 +71,16 @@
 		3F16409E211080D00007ECFA /* UIImageView+LabAddition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+LabAddition.m"; sourceTree = "<group>"; };
 		3F1640A1211083190007ECFA /* ImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
 		3F1640A2211083190007ECFA /* ImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
+		3F1640A72112C6C00007ECFA /* UIAlertController+LabAddition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+LabAddition.h"; sourceTree = "<group>"; };
+		3F1640A82112C6C00007ECFA /* UIAlertController+LabAddition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+LabAddition.m"; sourceTree = "<group>"; };
+		3F1640AB211304080007ECFA /* MGTVideoEditorController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGTVideoEditorController.h; sourceTree = "<group>"; };
+		3F1640AC211304080007ECFA /* MGTVideoEditorController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGTVideoEditorController.m; sourceTree = "<group>"; };
+		3F1640AF211306B90007ECFA /* MGTActionBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGTActionBar.h; sourceTree = "<group>"; };
+		3F1640B0211306B90007ECFA /* MGTActionBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGTActionBar.m; sourceTree = "<group>"; };
+		3F1640B3211306D20007ECFA /* MGTActionItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGTActionItem.h; sourceTree = "<group>"; };
+		3F1640B4211306D20007ECFA /* MGTActionItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGTActionItem.m; sourceTree = "<group>"; };
+		3F1640B7211321520007ECFA /* UIResponder+LabAddition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIResponder+LabAddition.h"; sourceTree = "<group>"; };
+		3F1640B8211321520007ECFA /* UIResponder+LabAddition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+LabAddition.m"; sourceTree = "<group>"; };
 		3F3DEE5020D902E200C1A28F /* Lab Enterprise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lab Enterprise.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F3DEE5120D902E200C1A28F /* Lab Enterprise-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Lab Enterprise-Info.plist"; path = "/Users/hao/workspace/Lab/Lab Enterprise-Info.plist"; sourceTree = "<absolute>"; };
 		3FD0A51F20B808E300412448 /* Lab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lab.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -160,8 +180,25 @@
 		3F1640A521115C160007ECFA /* shortVideo */ = {
 			isa = PBXGroup;
 			children = (
+				3F1640AB211304080007ECFA /* MGTVideoEditorController.h */,
+				3F1640AC211304080007ECFA /* MGTVideoEditorController.m */,
+				3F1640AF211306B90007ECFA /* MGTActionBar.h */,
+				3F1640B0211306B90007ECFA /* MGTActionBar.m */,
+				3F1640B3211306D20007ECFA /* MGTActionItem.h */,
+				3F1640B4211306D20007ECFA /* MGTActionItem.m */,
 			);
 			path = shortVideo;
+			sourceTree = "<group>";
+		};
+		3F1640A62112C6A70007ECFA /* categories */ = {
+			isa = PBXGroup;
+			children = (
+				3F1640A72112C6C00007ECFA /* UIAlertController+LabAddition.h */,
+				3F1640A82112C6C00007ECFA /* UIAlertController+LabAddition.m */,
+				3F1640B7211321520007ECFA /* UIResponder+LabAddition.h */,
+				3F1640B8211321520007ECFA /* UIResponder+LabAddition.m */,
+			);
+			path = categories;
 			sourceTree = "<group>";
 		};
 		3FD0A51620B808E300412448 = {
@@ -237,6 +274,7 @@
 		3FD0A92520C52F4600412448 /* Lab */ = {
 			isa = PBXGroup;
 			children = (
+				3F1640A62112C6A70007ECFA /* categories */,
 				3F1640A521115C160007ECFA /* shortVideo */,
 				3F164098211064F60007ECFA /* cornerradius */,
 				3FD0A92920C52FCF00412448 /* invocation */,
@@ -438,15 +476,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F1640A4211083190007ECFA /* ImageViewController.m in Sources */,
+				3F1640BA211321520007ECFA /* UIResponder+LabAddition.m in Sources */,
 				3F1640A0211080D00007ECFA /* UIImageView+LabAddition.m in Sources */,
 				3F3DEE4020D902E200C1A28F /* InvocationViewController.m in Sources */,
+				3F1640AE211304080007ECFA /* MGTVideoEditorController.m in Sources */,
 				3F3DEE4120D902E200C1A28F /* WCShareView.m in Sources */,
 				3F3DEE4220D902E200C1A28F /* main.m in Sources */,
 				3F3DEE4320D902E200C1A28F /* EntryViewController.m in Sources */,
 				3F3DEE4420D902E200C1A28F /* InvocationTarget.m in Sources */,
 				3F3DEE4520D902E200C1A28F /* ShareViewController.m in Sources */,
+				3F1640B6211306D20007ECFA /* MGTActionItem.m in Sources */,
+				3F1640B2211306B90007ECFA /* MGTActionBar.m in Sources */,
 				3F16409C211065A30007ECFA /* UIView+LabAddition.m in Sources */,
 				3F3DEE4620D902E200C1A28F /* AppDelegate.m in Sources */,
+				3F1640AA2112C6C00007ECFA /* UIAlertController+LabAddition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,15 +498,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F1640A3211083190007ECFA /* ImageViewController.m in Sources */,
+				3F1640B9211321520007ECFA /* UIResponder+LabAddition.m in Sources */,
 				3F16409F211080D00007ECFA /* UIImageView+LabAddition.m in Sources */,
 				3FD0A92C20C52FCF00412448 /* InvocationViewController.m in Sources */,
+				3F1640AD211304080007ECFA /* MGTVideoEditorController.m in Sources */,
 				3FD0A55A20B80BF200412448 /* WCShareView.m in Sources */,
 				3FD0A53220B808E300412448 /* main.m in Sources */,
 				3FD0A55720B80B9400412448 /* EntryViewController.m in Sources */,
 				3FD0A92F20C5304D00412448 /* InvocationTarget.m in Sources */,
 				3FD0A55D20B80F8F00412448 /* ShareViewController.m in Sources */,
+				3F1640B5211306D20007ECFA /* MGTActionItem.m in Sources */,
+				3F1640B1211306B90007ECFA /* MGTActionBar.m in Sources */,
 				3F16409B211065A30007ECFA /* UIView+LabAddition.m in Sources */,
 				3FD0A52420B808E300412448 /* AppDelegate.m in Sources */,
+				3F1640A92112C6C00007ECFA /* UIAlertController+LabAddition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

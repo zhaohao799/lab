@@ -10,6 +10,8 @@
 
 #import "ShareViewController.h"
 #import "InvocationViewController.h"
+#import "UIAlertController+LabAddition.h"
+#import "UIResponder+LabAddition.h"
 
 #ifdef DEBUG
 #define ENTRY_TITLE @"Entry"
@@ -33,7 +35,7 @@
     [super viewDidLoad];
     
     self.title = ENTRY_TITLE;
-    self.dataArray = @[@"share test", @"invocation", @"Alert"];
+    self.dataArray = @[@"share test", @"invocation", @"Alert", @"fast alert", @"event alert"];
     
     self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 100, 100) style:UITableViewStylePlain];
     self.tableView.dataSource = self;
@@ -117,6 +119,31 @@
         [self presentViewController:alert animated:YES completion:^{
             NSLog(@"present action sheet complete");
         }];
+    }
+    
+    if (indexPath.row == 3) {
+        UIAlertController *controller = [UIAlertController mgt_alertSheetWithActionTitles:@[@"aaa", @"bbb", @"ccc"]
+                                                                              titleColors:@[[UIColor greenColor], [UIColor magentaColor]]
+                                                                                 handlers:@[^(UIAlertAction *action){
+                                                                                            NSLog(@"aaa action");},
+                                                                                             ^(UIAlertAction *action){
+                                                                                        NSLog(@"bbb action");}]];
+        
+        [self presentViewController:controller animated:YES completion:nil];
+    }
+    
+    if (indexPath.row == 4) {
+        UIAlertController *controller = [UIAlertController mgt_alertSheetWithActionTitles:@[@"aaa", @"bbb", @"ccc"] titleColors:@[[UIColor greenColor]] events:@[@"aaa", @"bbb"] routerView:self.view];
+        [self presentViewController:controller animated:YES completion:nil];
+    }
+}
+
+- (void)routerEventWithName:(NSString *)eventName userInfo:(NSDictionary *)userInfo {
+    if ([eventName isEqualToString:@"aaa"]) {
+        NSLog(@"aaa action");
+    }
+    if ([eventName isEqualToString:@"bbb"]) {
+        NSLog(@"bbb action");
     }
 }
 
