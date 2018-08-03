@@ -82,7 +82,7 @@
 		3F1640B7211321520007ECFA /* UIResponder+LabAddition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIResponder+LabAddition.h"; sourceTree = "<group>"; };
 		3F1640B8211321520007ECFA /* UIResponder+LabAddition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+LabAddition.m"; sourceTree = "<group>"; };
 		3F3DEE5020D902E200C1A28F /* Lab Enterprise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lab Enterprise.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3F3DEE5120D902E200C1A28F /* Lab Enterprise-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Lab Enterprise-Info.plist"; path = "/Users/hao/workspace/Lab/Lab Enterprise-Info.plist"; sourceTree = "<absolute>"; };
+		3F3DEE5120D902E200C1A28F /* Lab Enterprise-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Lab Enterprise-Info.plist"; path = "/Users/hao/Workspace/lab/Lab Enterprise-Info.plist"; sourceTree = "<absolute>"; };
 		3FD0A51F20B808E300412448 /* Lab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FD0A52220B808E300412448 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3FD0A52320B808E300412448 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -618,6 +618,14 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AFNetworking\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/MBProgressHUD\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/MGTCategories\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Masonry\"",
+					"\"$(SRCROOT)/\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = fun.owr.cfm.Lab;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "8a3a97b1-50fa-43d5-983d-1de1da87e6af";
@@ -844,6 +852,14 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AFNetworking\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/MBProgressHUD\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/MGTCategories\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Masonry\"",
+					"\"$(SRCROOT)/\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = fun.owr.cfm.Lab;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "8a3a97b1-50fa-43d5-983d-1de1da87e6af";
@@ -864,6 +880,14 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AFNetworking\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/MBProgressHUD\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/MGTCategories\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Masonry\"",
+					"\"$(SRCROOT)/\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = fun.owr.cfm.Lab;
 				PRODUCT_NAME = "$(TARGET_NAME)";

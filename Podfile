@@ -8,4 +8,5 @@ target 'Lab' do
   pod 'Masonry'
   pod 'AFNetworking'
   pod 'MGTCategories'
+  pod 'MBProgressHUD'
 end

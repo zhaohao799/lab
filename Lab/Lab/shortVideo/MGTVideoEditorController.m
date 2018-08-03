@@ -6,6 +6,8 @@
 //
 
 #import "MGTVideoEditorController.h"
+#import "MGTActionBar.h"
+#import "MGTActionItem.h"
 
 @interface MGTVideoEditorController ()
 

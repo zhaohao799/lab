@@ -12,6 +12,13 @@ typedef NS_ENUM(NSInteger, MGTActionBarStyle) {
     MGTActionBarStyleLandscape
 };
 
+@class MGTActionItem;
 @interface MGTActionBar : UIView
+
++ (instancetype)actionBarWithStyle:(MGTActionBarStyle)barStyle;
+
++ (instancetype)actionBarWithItems:(nonnull NSArray<MGTActionItem *> *)itemArray style:(MGTActionBarStyle)barStyle;
+
+- (void)addActionItem:(nonnull MGTActionItem *)item;
 
 @end

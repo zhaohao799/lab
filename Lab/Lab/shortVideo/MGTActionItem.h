@@ -21,6 +21,6 @@
 
 + (instancetype)itemWithTitle:(nullable NSString *)title event:(nullable NSString *)eventName;
 
-+ (instancetype)itemWithCustomView:(UIView *)customerView;
++ (instancetype)itemWithCustomView:(UIView *)customerView event:(nullable NSString *)eventName;
 
 @end
