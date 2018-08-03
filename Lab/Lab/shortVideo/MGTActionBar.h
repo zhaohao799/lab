@@ -21,4 +21,6 @@ typedef NS_ENUM(NSInteger, MGTActionBarStyle) {
 
 - (void)addActionItem:(nonnull MGTActionItem *)item;
 
+- (void)setupLayout;
+
 @end

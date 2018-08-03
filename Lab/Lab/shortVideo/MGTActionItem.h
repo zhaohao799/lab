@@ -23,4 +23,6 @@
 
 + (instancetype)itemWithCustomView:(UIView *)customerView event:(nullable NSString *)eventName;
 
+- (void)setupLayout;
+
 @end

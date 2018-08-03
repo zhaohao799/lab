@@ -96,7 +96,7 @@ typedef NS_ENUM(NSInteger, MGTActionItemStyle){
     return self;
 }
 
-- (void)layoutSubviews {
+- (void)setupLayout {
     NSInvocation *invocation = self.layoutStrategy[@(self.itemStyle)];
     [invocation invokeWithTarget:self];
 }
@@ -136,8 +136,20 @@ typedef NS_ENUM(NSInteger, MGTActionItemStyle){
 }
 
 - (NSInvocation *)createInvocationWithSelector:(SEL)selector {
-    NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:[NSMethodSignature methodSignatureForSelector:selector]];
+    NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:[self.class instanceMethodSignatureForSelector:selector]];
+    [invocation setSelector:selector];
     return invocation;
+}
+
+
+#pragma mark Interaction
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [UIView animateWithDuration:0.25 animations:^{
+        self.transform = CGAffineTransformMakeScale(1.2, 1.2);
+    } completion:^(BOOL finished) {
+        self.transform = CGAffineTransformIdentity;
+    }];
 }
 
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {

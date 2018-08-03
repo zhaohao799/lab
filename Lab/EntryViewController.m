@@ -12,6 +12,7 @@
 #import "InvocationViewController.h"
 #import "UIAlertController+LabAddition.h"
 #import "UIResponder+LabAddition.h"
+#import "MGTVideoEditorController.h"
 
 #ifdef DEBUG
 #define ENTRY_TITLE @"Entry"
@@ -35,7 +36,7 @@
     [super viewDidLoad];
     
     self.title = ENTRY_TITLE;
-    self.dataArray = @[@"share test", @"invocation", @"Alert", @"fast alert", @"event alert"];
+    self.dataArray = @[@"share test", @"invocation", @"Alert", @"fast alert", @"event alert", @"short video"];
     
     self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 100, 100) style:UITableViewStylePlain];
     self.tableView.dataSource = self;
@@ -135,6 +136,11 @@
     if (indexPath.row == 4) {
         UIAlertController *controller = [UIAlertController mgt_alertSheetWithActionTitles:@[@"aaa", @"bbb", @"ccc"] titleColors:@[[UIColor greenColor]] events:@[@"aaa", @"bbb"] routerView:self.view];
         [self presentViewController:controller animated:YES completion:nil];
+    }
+    
+    if (indexPath.row == 5) {
+        MGTVideoEditorController *controller = [[MGTVideoEditorController alloc] initWithNibName:nil bundle:nil];
+        [self.navigationController pushViewController:controller animated:YES];
     }
 }
 

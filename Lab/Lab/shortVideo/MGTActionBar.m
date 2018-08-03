@@ -21,20 +21,11 @@
 @implementation MGTActionBar
 
 + (instancetype)actionBarWithStyle:(MGTActionBarStyle)barStyle {
-    return [[MGTActionBar alloc] initWithStyle:barStyle];
+    return [[MGTActionBar alloc] initWithItems:nil style:barStyle];
 }
 
 + (instancetype)actionBarWithItems:(NSArray<MGTActionItem *> *)itemArray style:(MGTActionBarStyle)barStyle {
     return [[MGTActionBar alloc] initWithItems:itemArray style:barStyle];
-}
-
-- (instancetype)initWithStyle:(MGTActionBarStyle)barStyle {
-    self = [super init];
-    if (self) {
-        _barStyle = barStyle;
-        _padding = 20.0f;
-    }
-    return self;
 }
 
 - (instancetype)initWithItems:(NSArray<MGTActionItem *> *)itemArray style:(MGTActionBarStyle)barStyle {
@@ -43,6 +34,9 @@
         _items = [NSMutableArray arrayWithArray:itemArray];
         _barStyle = barStyle;
         _padding = 20.0f;
+        for (MGTActionItem *item in _items) {
+            [self addSubview:item];
+        }
     }
     return self;
 }
@@ -50,10 +44,20 @@
 - (void)addActionItem:(MGTActionItem *)item {
     if (item) {
         [self.items addObject:item];
+        [self addSubview:item];
     }
+    [self setupLayout];
 }
 
-- (void)layoutSubviews {
+- (void)removeActionItem:(MGTActionItem *)item {
+    if (item) {
+        [self.items removeObject:item];
+        [item removeFromSuperview];
+    }
+    [self setupLayout];
+}
+
+- (void)setupLayout {
     if (self.barStyle == MGTActionBarStylePortrait) {
         [self layoutSubviewsForPortraitStyle];
     } else {
@@ -61,28 +65,32 @@
     }
 }
 
-- (void)layoutSubviewsForPortraitStyle {
+- (void)layoutSubviewsForLandscapeStyle {
     CGFloat kItemWidth = 44.0f;
     CGFloat kItemHeight = 44.0f;
     CGPoint oringin = CGPointMake(0, 0);
     for (MGTActionItem *item in self.items) {
         CGRect frame = CGRectMake(oringin.x, oringin.y, kItemWidth, kItemHeight);
         item.frame = frame;
+        [item setupLayout];
         oringin.x = oringin.x + kItemWidth + self.padding;
     }
-    [self sizeToFit];
+    CGFloat newWidth = oringin.x - self.padding;
+    self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, newWidth, self.frame.size.height);
 }
 
-- (void)layoutSubviewsForLandscapeStyle {
+- (void)layoutSubviewsForPortraitStyle {
     CGFloat kItemWidth = 37.0f;
     CGFloat kItemHeight = 57.0f;
     CGPoint origin = CGPointMake(0, 0);
     for (MGTActionItem *item in self.items) {
         CGRect frame = CGRectMake(origin.x, origin.y, kItemWidth, kItemHeight);
         item.frame = frame;
+        [item setupLayout];
         origin.y = origin.y + kItemHeight + self.padding;
     }
-    [self sizeToFit];
+    CGFloat newHeight = origin.y - self.padding;
+    self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, newHeight);
 }
 
 @end
