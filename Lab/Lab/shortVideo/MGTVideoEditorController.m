@@ -88,27 +88,19 @@
     [self startEditingWithPanelSize:CGSizeMake(self.view.bounds.size.width, 176.0f)];
     [self hideEditorView];
     self.audioEditor.view.hidden = NO;
-    [self.audioEditor.view mas_remakeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self.editorOperationPanel);
-    }];
+    
 }
 
 - (void)onVolumeItemTap {
     [self startEditingWithPanelSize:CGSizeMake(self.view.bounds.size.width, 176.0f)];
     [self hideEditorView];
     self.volumeEditor.view.hidden = NO;
-    [self.volumeEditor.view mas_remakeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self.editorOperationPanel);
-    }];
 }
 
 - (void)onEffectItemTap {
     [self startEditingWithPanelSize:CGSizeMake(self.view.bounds.size.width, 222.0f)];
     [self hideEditorView];
     self.effectEditor.view.hidden = NO;
-    [self.effectEditor.view mas_remakeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self.editorOperationPanel);
-    }];
 }
 
 - (void)onNextButtonTap {

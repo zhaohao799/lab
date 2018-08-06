@@ -9,8 +9,12 @@
 #import "MGTVideoEditorPanelOperationBar.h"
 #import <MGTCategories/UIColor+MGTAddition.h>
 #import <Masonry/Masonry.h>
+#import "MGTVideoTimelineEffectTrack.h"
+#import "UIResponder+LabAddition.h"
 
 @interface MGTVideoEffectEditor ()
+
+@property (strong, nonatomic) MGTVideoTimelineEffectTrack *timelineTrack;
 
 @property (copy, nonatomic) NSArray *buttonArray;
 
@@ -30,18 +34,22 @@
 
 - (void)onNoneButtonTap:(UIButton *)sender {
     [self switchButtonSelected:sender];
+    [self.timelineTrack hideTrackItem];
 }
 
 - (void)onSlowButtonTap:(UIButton *)sender {
     [self switchButtonSelected:sender];
+    [self.timelineTrack setupTrackItem];
 }
 
 - (void)onReverseButtonTap:(UIButton *)sender {
     [self switchButtonSelected:sender];
+    [self.timelineTrack setupTrackItem];
 }
 
 - (void)onRepeatButtonTap:(UIButton *)sender {
     [self switchButtonSelected:sender];
+    [self.timelineTrack setupTrackItem];
 }
 
 - (void)switchButtonSelected:(UIButton *)sender {
@@ -55,10 +63,16 @@
     }
 }
 
+- (void)routerEventWithName:(NSString *)eventName userInfo:(NSDictionary *)userInfo {
+    if ([eventName isEqualToString:kEffectTrackItemPanEvent]) {
+        CGFloat value = [userInfo[kEffectTrackItemPositionUserInfoKey] floatValue];
+        NSLog(@"%f", value);
+    }
+}
+
 - (void)setupLayout {
-    UIView *timelineTrack = [[UIView alloc] initWithFrame:CGRectZero];
-    timelineTrack.backgroundColor = [UIColor yellowColor];
-    [self.view addSubview:timelineTrack];
+    self.timelineTrack = [[MGTVideoTimelineEffectTrack alloc] initWithFrame:CGRectZero];
+    [self.view addSubview:self.timelineTrack];
     
     UIButton *noneButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [noneButton setImage:[UIImage imageNamed:@"effect"] forState:UIControlStateNormal];
@@ -128,7 +142,7 @@
     MGTVideoEditorPanelOperationBar *operationBar = [MGTVideoEditorPanelOperationBar barWithTitle:@"特效"];
     [self.view addSubview:operationBar];
     
-    [timelineTrack mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.timelineTrack mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.view).with.offset(8);
         make.leading.equalTo(self.view).with.offset(15);
         make.trailing.equalTo(self.view).with.offset(-15);
@@ -138,7 +152,7 @@
     CGFloat screenWidth = self.view.bounds.size.width;
     CGFloat buttonPadding = screenWidth/4;
     [noneButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(timelineTrack.mas_bottom).with.offset(11);
+        make.top.equalTo(self.timelineTrack.mas_bottom).with.offset(11);
         make.centerX.equalTo(self.view.mas_leading).with.offset(screenWidth/8);
         make.width.equalTo(@50);
         make.height.equalTo(@66);

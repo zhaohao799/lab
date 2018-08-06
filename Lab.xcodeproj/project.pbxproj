@@ -25,6 +25,12 @@
 		3F1640BA211321520007ECFA /* UIResponder+LabAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1640B8211321520007ECFA /* UIResponder+LabAddition.m */; };
 		3F1640C0211463100007ECFA /* MGTVideoEditorFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1640BF2114630F0007ECFA /* MGTVideoEditorFrame.m */; };
 		3F1640C1211463100007ECFA /* MGTVideoEditorFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1640BF2114630F0007ECFA /* MGTVideoEditorFrame.m */; };
+		3F1640E721182D570007ECFA /* MGTVideoTimelineBaseTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1640E621182D570007ECFA /* MGTVideoTimelineBaseTrack.m */; };
+		3F1640E821182D570007ECFA /* MGTVideoTimelineBaseTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1640E621182D570007ECFA /* MGTVideoTimelineBaseTrack.m */; };
+		3F1640EB21183C430007ECFA /* MGTVideoTimelineEffectTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1640EA21183C430007ECFA /* MGTVideoTimelineEffectTrack.m */; };
+		3F1640EC21183C430007ECFA /* MGTVideoTimelineEffectTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1640EA21183C430007ECFA /* MGTVideoTimelineEffectTrack.m */; };
+		3F1640EF21184D4D0007ECFA /* MGTVideoTimelineAudioTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1640EE21184D4D0007ECFA /* MGTVideoTimelineAudioTrack.m */; };
+		3F1640F021184D4D0007ECFA /* MGTVideoTimelineAudioTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1640EE21184D4D0007ECFA /* MGTVideoTimelineAudioTrack.m */; };
 		3F3DEE4020D902E200C1A28F /* InvocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD0A92B20C52FCF00412448 /* InvocationViewController.m */; };
 		3F3DEE4120D902E200C1A28F /* WCShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD0A55820B80BF200412448 /* WCShareView.m */; };
 		3F3DEE4220D902E200C1A28F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD0A53120B808E300412448 /* main.m */; };
@@ -92,6 +98,12 @@
 		3F1640B8211321520007ECFA /* UIResponder+LabAddition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+LabAddition.m"; sourceTree = "<group>"; };
 		3F1640BE2114630F0007ECFA /* MGTVideoEditorFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGTVideoEditorFrame.h; sourceTree = "<group>"; };
 		3F1640BF2114630F0007ECFA /* MGTVideoEditorFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGTVideoEditorFrame.m; sourceTree = "<group>"; };
+		3F1640E521182D570007ECFA /* MGTVideoTimelineBaseTrack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGTVideoTimelineBaseTrack.h; sourceTree = "<group>"; };
+		3F1640E621182D570007ECFA /* MGTVideoTimelineBaseTrack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGTVideoTimelineBaseTrack.m; sourceTree = "<group>"; };
+		3F1640E921183C430007ECFA /* MGTVideoTimelineEffectTrack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGTVideoTimelineEffectTrack.h; sourceTree = "<group>"; };
+		3F1640EA21183C430007ECFA /* MGTVideoTimelineEffectTrack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGTVideoTimelineEffectTrack.m; sourceTree = "<group>"; };
+		3F1640ED21184D4D0007ECFA /* MGTVideoTimelineAudioTrack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGTVideoTimelineAudioTrack.h; sourceTree = "<group>"; };
+		3F1640EE21184D4D0007ECFA /* MGTVideoTimelineAudioTrack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGTVideoTimelineAudioTrack.m; sourceTree = "<group>"; };
 		3F3DEE5020D902E200C1A28F /* Lab Enterprise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lab Enterprise.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F3DEE5120D902E200C1A28F /* Lab Enterprise-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Lab Enterprise-Info.plist"; path = "/Users/hao/Workspace/lab/Lab Enterprise-Info.plist"; sourceTree = "<absolute>"; };
 		3F83EEB321161231002F3D1B /* MGTVideoEditorPanelOperationBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGTVideoEditorPanelOperationBar.h; sourceTree = "<group>"; };
@@ -215,6 +227,12 @@
 				3F83EEBB2116D94D002F3D1B /* MGTVideoVolumeEditor.m */,
 				3F83EEBE2116E420002F3D1B /* MGTVideoEffectEditor.h */,
 				3F83EEBF2116E420002F3D1B /* MGTVideoEffectEditor.m */,
+				3F1640E521182D570007ECFA /* MGTVideoTimelineBaseTrack.h */,
+				3F1640E621182D570007ECFA /* MGTVideoTimelineBaseTrack.m */,
+				3F1640E921183C430007ECFA /* MGTVideoTimelineEffectTrack.h */,
+				3F1640EA21183C430007ECFA /* MGTVideoTimelineEffectTrack.m */,
+				3F1640ED21184D4D0007ECFA /* MGTVideoTimelineAudioTrack.h */,
+				3F1640EE21184D4D0007ECFA /* MGTVideoTimelineAudioTrack.m */,
 			);
 			path = shortVideo;
 			sourceTree = "<group>";
@@ -504,11 +522,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F1640E821182D570007ECFA /* MGTVideoTimelineBaseTrack.m in Sources */,
 				3F1640A4211083190007ECFA /* ImageViewController.m in Sources */,
+				3F1640F021184D4D0007ECFA /* MGTVideoTimelineAudioTrack.m in Sources */,
 				3F83EEB92116CBA7002F3D1B /* MGTVideoAudioEditor.m in Sources */,
 				3F1640C1211463100007ECFA /* MGTVideoEditorFrame.m in Sources */,
 				3F83EEBD2116D94D002F3D1B /* MGTVideoVolumeEditor.m in Sources */,
 				3F1640BA211321520007ECFA /* UIResponder+LabAddition.m in Sources */,
+				3F1640EC21183C430007ECFA /* MGTVideoTimelineEffectTrack.m in Sources */,
 				3F1640A0211080D00007ECFA /* UIImageView+LabAddition.m in Sources */,
 				3F3DEE4020D902E200C1A28F /* InvocationViewController.m in Sources */,
 				3F83EEC12116E420002F3D1B /* MGTVideoEffectEditor.m in Sources */,
@@ -530,6 +551,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F1640EB21183C430007ECFA /* MGTVideoTimelineEffectTrack.m in Sources */,
 				3F1640A3211083190007ECFA /* ImageViewController.m in Sources */,
 				3F1640C0211463100007ECFA /* MGTVideoEditorFrame.m in Sources */,
 				3F83EEBC2116D94D002F3D1B /* MGTVideoVolumeEditor.m in Sources */,
@@ -540,6 +562,7 @@
 				3FD0A92C20C52FCF00412448 /* InvocationViewController.m in Sources */,
 				3F1640AD211304080007ECFA /* MGTVideoEditorController.m in Sources */,
 				3FD0A55A20B80BF200412448 /* WCShareView.m in Sources */,
+				3F1640EF21184D4D0007ECFA /* MGTVideoTimelineAudioTrack.m in Sources */,
 				3FD0A53220B808E300412448 /* main.m in Sources */,
 				3FD0A55720B80B9400412448 /* EntryViewController.m in Sources */,
 				3FD0A92F20C5304D00412448 /* InvocationTarget.m in Sources */,
@@ -550,6 +573,7 @@
 				3F16409B211065A30007ECFA /* UIView+LabAddition.m in Sources */,
 				3FD0A52420B808E300412448 /* AppDelegate.m in Sources */,
 				3F1640A92112C6C00007ECFA /* UIAlertController+LabAddition.m in Sources */,
+				3F1640E721182D570007ECFA /* MGTVideoTimelineBaseTrack.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
