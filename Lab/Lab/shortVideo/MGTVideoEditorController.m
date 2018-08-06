@@ -6,43 +6,175 @@
 //
 
 #import "MGTVideoEditorController.h"
-#import "MGTActionBar.h"
-#import "MGTActionItem.h"
 #import "UIResponder+LabAddition.h"
-
-NSString *const kMusicItemEvent = @"kMusicItemEvent";
-NSString *const kAudioItemEvent = @"kAudioItemEvent";
-NSString *const kVolumeItemEvent = @"kVolumeItemEvent";
-NSString *const kEffectItemEvent = @"kEffectItemEvent";
+#import "MGTVideoEditorFrame.h"
+#import "MGTVideoAudioEditor.h"
+#import "MGTVideoVolumeEditor.h"
+#import "MGTVideoEffectEditor.h"
+#import <Masonry/Masonry.h>
 
 @interface MGTVideoEditorController ()
+
+@property (strong, nonatomic) MGTVideoEditorFrame *editorFrame;
+
+@property (strong, nonatomic) UIView *editorOperationPanel;
+
+@property (strong, nonatomic) MGTVideoAudioEditor *audioEditor;
+
+@property (strong, nonatomic) MGTVideoVolumeEditor *volumeEditor;
+
+@property (strong, nonatomic) MGTVideoEffectEditor *effectEditor;
+
+@property (strong, nonatomic) NSDictionary *eventStrategy;
 
 @end
 
 @implementation MGTVideoEditorController
 
+- (BOOL)prefersStatusBarHidden {
+    return YES;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.edgesForExtendedLayout = NO;
     
-    MGTActionItem *musicItem = [MGTActionItem itemWithImage:[UIImage imageNamed:@"music"] title:@"音乐" event:kMusicItemEvent];
-    MGTActionItem *audioItem = [MGTActionItem itemWithImage:[UIImage imageNamed:@"audio"] title:@"配音" event:kAudioItemEvent];
-    MGTActionItem *volumeItem = [MGTActionItem itemWithImage:[UIImage imageNamed:@"volume"] title:@"音量" event:kVolumeItemEvent];
-    MGTActionItem *effectItem = [MGTActionItem itemWithImage:[UIImage imageNamed:@"effect"] title:@"特效" event:kEffectItemEvent];
+    self.view.backgroundColor = [UIColor blackColor];
     
-    MGTActionBar *actionBar = [MGTActionBar actionBarWithItems:@[musicItem, audioItem, volumeItem, effectItem] style:MGTActionBarStylePortrait];
-    actionBar.frame = CGRectMake(320, 80, 40, 40);
-    [actionBar setupLayout];
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"demo"]];
-    [self.view addSubview:actionBar];
+    self.editorFrame = [[MGTVideoEditorFrame alloc] initWithMode:MGTVideoEditorModeNormal];
+    [self.view addSubview:self.editorFrame];
+    self.editorOperationPanel = [[UIView alloc] initWithFrame:CGRectZero];
+    self.editorOperationPanel.backgroundColor = [UIColor blackColor];
+    [self.view addSubview:self.editorOperationPanel];
+    [self.editorOperationPanel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.leading.bottom.and.trailing.equalTo(self.view);
+        make.height.equalTo(@0);
+    }];
+    [self.editorFrame mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.left.and.trailing.equalTo(self.view);
+        make.bottom.equalTo(self.editorOperationPanel.mas_top);
+    }];
+    
+    self.audioEditor = [[MGTVideoAudioEditor alloc] initWithNibName:nil bundle:nil];
+    [self.editorOperationPanel addSubview:self.audioEditor.view];
+    
+    self.volumeEditor = [[MGTVideoVolumeEditor alloc]  initWithNibName:nil bundle:nil];
+    [self.editorOperationPanel addSubview:self.volumeEditor.view];
+    
+    self.effectEditor = [[MGTVideoEffectEditor alloc] initWithNibName:nil bundle:nil];
+    [self.editorOperationPanel addSubview:self.effectEditor.view];
+    
+    [self hideEditorView];
 }
 
 - (void)routerEventWithName:(NSString *)eventName userInfo:(NSDictionary *)userInfo {
-    if ([eventName isEqualToString:kMusicItemEvent]) {
-        NSLog(@"music item event");
-    }
-    if ([eventName isEqualToString:kAudioItemEvent]) {
-        NSLog(@"audio item event");
-    }
+    NSInvocation *invocation = self.eventStrategy[eventName];
+    [invocation invokeWithTarget:self];
 }
+
+- (void)onMusicItemTap {
+    
+}
+
+- (void)onAudioItemTap {
+    [self startEditingWithPanelSize:CGSizeMake(self.view.bounds.size.width, 176.0f)];
+    [self hideEditorView];
+    self.audioEditor.view.hidden = NO;
+    [self.audioEditor.view mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.editorOperationPanel);
+    }];
+}
+
+- (void)onVolumeItemTap {
+    [self startEditingWithPanelSize:CGSizeMake(self.view.bounds.size.width, 176.0f)];
+    [self hideEditorView];
+    self.volumeEditor.view.hidden = NO;
+    [self.volumeEditor.view mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.editorOperationPanel);
+    }];
+}
+
+- (void)onEffectItemTap {
+    [self startEditingWithPanelSize:CGSizeMake(self.view.bounds.size.width, 222.0f)];
+    [self hideEditorView];
+    self.effectEditor.view.hidden = NO;
+    [self.effectEditor.view mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.editorOperationPanel);
+    }];
+}
+
+- (void)onNextButtonTap {
+    
+}
+
+- (void)onBackButtonTap {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)onEditingCancelEvent {
+    [self stopEditing];
+}
+
+- (void)onEditingConfirmEvent {
+    [self stopEditing];
+}
+
+- (void)startEditingWithPanelSize:(CGSize)panelSize {
+    [self.editorFrame switchMode:MGTVideoEditorModeEditing];
+    [UIView animateWithDuration:0.4 animations:^{
+        [self.editorOperationPanel mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.leading.bottom.and.trailing.equalTo(self.view);
+            make.height.equalTo(@(panelSize.height));
+        }];
+        [self.view layoutIfNeeded];
+    }];
+}
+
+- (void)stopEditing {
+    [self.editorFrame switchMode:MGTVideoEditorModeNormal];
+    [UIView animateWithDuration:0.4 animations:^{
+        [self.editorOperationPanel mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.leading.and.trailing.equalTo(self.view);
+            make.top.equalTo(self.view.mas_bottom);
+            make.height.equalTo(@0);
+        }];
+        [self.view layoutIfNeeded];
+    }];
+}
+
+- (NSDictionary<NSString *, NSInvocation *> *)eventStrategy {
+    if (!_eventStrategy) {
+        _eventStrategy = @{kMusicItemEvent: [self createInvocationWithSelector:@selector(onMusicItemTap)],
+                           kAudioItemEvent: [self createInvocationWithSelector:@selector(onAudioItemTap)],
+                           kVolumeItemEvent: [self createInvocationWithSelector:@selector(onVolumeItemTap)],
+                           kEffectItemEvent: [self createInvocationWithSelector:@selector(onEffectItemTap)],
+                           kNextButtonTap: [self createInvocationWithSelector:@selector(onNextButtonTap)],
+                           kBackButtonTap: [self createInvocationWithSelector:@selector(onBackButtonTap)],
+                           kEditingCancelEvent: [self createInvocationWithSelector:@selector(onEditingCancelEvent)],
+                           kEditingConfirmEvent: [self createInvocationWithSelector:@selector(onEditingConfirmEvent)]
+                           };
+    }
+    return _eventStrategy;
+}
+
+- (NSInvocation *)createInvocationWithSelector:(SEL)selector {
+    NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:[self.class instanceMethodSignatureForSelector:selector]];
+    [invocation setSelector:selector];
+    return invocation;
+}
+
+- (void)hideEditorView {
+    self.audioEditor.view.hidden = YES;
+    self.volumeEditor.view.hidden = YES;
+    self.effectEditor.view.hidden = YES;
+}
+
 @end

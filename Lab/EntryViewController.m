@@ -140,6 +140,7 @@
     
     if (indexPath.row == 5) {
         MGTVideoEditorController *controller = [[MGTVideoEditorController alloc] initWithNibName:nil bundle:nil];
+        [controller setHidesBottomBarWhenPushed:YES];
         [self.navigationController pushViewController:controller animated:YES];
     }
 }

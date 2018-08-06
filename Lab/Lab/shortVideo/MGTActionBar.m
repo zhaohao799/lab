@@ -80,7 +80,7 @@
 }
 
 - (void)layoutSubviewsForPortraitStyle {
-    CGFloat kItemWidth = 37.0f;
+    CGFloat kItemWidth = 40.0f;
     CGFloat kItemHeight = 57.0f;
     CGPoint origin = CGPointMake(0, 0);
     for (MGTActionItem *item in self.items) {
