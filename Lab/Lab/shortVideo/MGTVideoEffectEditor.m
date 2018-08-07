@@ -68,6 +68,7 @@
         CGFloat value = [userInfo[kEffectTrackItemPositionUserInfoKey] floatValue];
         NSLog(@"%f", value);
     }
+    [self.nextResponder routerEventWithName:eventName userInfo:userInfo];
 }
 
 - (void)setupLayout {
