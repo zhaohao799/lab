@@ -27,6 +27,8 @@ UIKIT_EXTERN NSString *const kBackButtonTap;
 
 - (instancetype)initWithMode:(MGTVideoEditorMode)mode;
 
+
+
 - (void)switchMode:(MGTVideoEditorMode)mode;
 
 @end

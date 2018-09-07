@@ -11,10 +11,13 @@
 #import <Masonry/Masonry.h>
 #import "MGTVideoTimelineEffectTrack.h"
 #import "UIResponder+LabAddition.h"
+#import <SDWebImage/UIImage+GIF.h>
 
-@interface MGTVideoEffectEditor ()
+@interface MGTVideoEffectEditor ()<UICollectionViewDelegate, UICollectionViewDataSource>
 
 @property (strong, nonatomic) MGTVideoTimelineEffectTrack *timelineTrack;
+
+@property (strong, nonatomic) UICollectionView *filterBar;
 
 @property (copy, nonatomic) NSArray *buttonArray;
 
@@ -75,8 +78,19 @@
     self.timelineTrack = [[MGTVideoTimelineEffectTrack alloc] initWithFrame:CGRectZero];
     [self.view addSubview:self.timelineTrack];
     
+    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+    layout.itemSize = CGSizeMake(56, 66);
+    layout.minimumLineSpacing = 40;
+    layout.sectionInset = UIEdgeInsetsMake(0, 20, 0, 20);
+    self.filterBar = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, 100, 100) collectionViewLayout:layout];
+//    [self.filterBar registerClass:[MGTBeautyFilterCollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
+    self.filterBar.delegate = self;
+    self.filterBar.dataSource = self;
+    [self.view addSubview:self.filterBar];
+    
+    UIImage *noneImage = [self createGifImageWithFileName:@"sv_effect_none"];
     UIButton *noneButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [noneButton setImage:[UIImage imageNamed:@"effect"] forState:UIControlStateNormal];
+//    [noneButton setImage:noneImage forState:UIControlStateNormal];
     [noneButton setTitle:@"无" forState:UIControlStateNormal];
     noneButton.titleLabel.font = [UIFont systemFontOfSize:12];
     [noneButton setTitleColor:[UIColor mgt_colorWithHex:0xFFFFFF] forState:UIControlStateNormal];
@@ -88,12 +102,16 @@
         make.top.and.leading.and.trailing.equalTo(noneButton);
         make.height.equalTo(@50);
     }];
-    [noneButton setTitleEdgeInsets:UIEdgeInsetsMake(50, -37, 0, 0)];
+    noneButton.contentVerticalAlignment = UIControlContentVerticalAlignmentTop;
+    noneButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+    [noneButton setTitleEdgeInsets:UIEdgeInsetsMake(50, -50, 0, 0)];
+    [noneButton setImageEdgeInsets:UIEdgeInsetsMake(-17, 0, 0, -50)];
     [noneButton addTarget:self action:@selector(onNoneButtonTap:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:noneButton];
     
+    UIImage *slowImage = [self createGifImageWithFileName:@"sv_effect_slow"];
     UIButton *slowButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [slowButton setImage:[UIImage imageNamed:@"effect"] forState:UIControlStateNormal];
+    [slowButton setImage:slowImage forState:UIControlStateNormal];
     [slowButton setTitle:@"慢动作" forState:UIControlStateNormal];
     slowButton.titleLabel.font = [UIFont systemFontOfSize:12];
     [slowButton setTitleColor:[UIColor mgt_colorWithHex:0xFFFFFF] forState:UIControlStateNormal];
@@ -108,8 +126,9 @@
     [slowButton addTarget:self action:@selector(onSlowButtonTap:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:slowButton];
     
+    UIImage *reverseImage = [self createGifImageWithFileName:@"sv_effect_reverse"];
     UIButton *reverseButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [reverseButton setImage:[UIImage imageNamed:@"effect"] forState:UIControlStateNormal];
+    [reverseButton setImage:reverseImage forState:UIControlStateNormal];
     [reverseButton setTitle:@"倒放" forState:UIControlStateNormal];
     reverseButton.titleLabel.font = [UIFont systemFontOfSize:12];
     [reverseButton setTitleColor:[UIColor mgt_colorWithHex:0xFFFFFF] forState:UIControlStateNormal];
@@ -123,8 +142,9 @@
     [reverseButton addTarget:self action:@selector(onReverseButtonTap:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:reverseButton];
     
+    UIImage *repeatImage = [self createGifImageWithFileName:@"sv_effect_repeat"];
     UIButton *repeatButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [repeatButton setImage:[UIImage imageNamed:@"effect"] forState:UIControlStateNormal];
+    [repeatButton setImage:repeatImage forState:UIControlStateNormal];
     [repeatButton setTitle:@"反复" forState:UIControlStateNormal];
     repeatButton.titleLabel.font = [UIFont systemFontOfSize:12];
     [repeatButton setTitleColor:[UIColor mgt_colorWithHex:0xFFFFFF] forState:UIControlStateNormal];
@@ -181,6 +201,14 @@
         make.top.equalTo(self.view.mas_top).with.offset(140);
         make.height.equalTo(@82);
     }];
+}
+
+- (UIImage *)createGifImageWithFileName:(NSString *)name {
+    NSString *file = [[NSBundle mainBundle] pathForResource:name ofType:@"gif"];
+    NSData *data = [NSData dataWithContentsOfFile:file];
+    UIImage *image = [UIImage sd_animatedGIFWithData:data];
+    
+    return image;
 }
 
 @end

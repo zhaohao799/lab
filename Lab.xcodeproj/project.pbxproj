@@ -31,6 +31,14 @@
 		3F1640EC21183C430007ECFA /* MGTVideoTimelineEffectTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1640EA21183C430007ECFA /* MGTVideoTimelineEffectTrack.m */; };
 		3F1640EF21184D4D0007ECFA /* MGTVideoTimelineAudioTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1640EE21184D4D0007ECFA /* MGTVideoTimelineAudioTrack.m */; };
 		3F1640F021184D4D0007ECFA /* MGTVideoTimelineAudioTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1640EE21184D4D0007ECFA /* MGTVideoTimelineAudioTrack.m */; };
+		3F242C852123D4F80082F0FA /* sv_effect_none.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3F242C842123D4F80082F0FA /* sv_effect_none.gif */; };
+		3F242C862123D4F80082F0FA /* sv_effect_none.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3F242C842123D4F80082F0FA /* sv_effect_none.gif */; };
+		3F242C8A2123D6FD0082F0FA /* sv_effect_slow.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3F242C872123D6FD0082F0FA /* sv_effect_slow.gif */; };
+		3F242C8B2123D6FD0082F0FA /* sv_effect_slow.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3F242C872123D6FD0082F0FA /* sv_effect_slow.gif */; };
+		3F242C8C2123D6FD0082F0FA /* sv_effect_reverse.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3F242C882123D6FD0082F0FA /* sv_effect_reverse.gif */; };
+		3F242C8D2123D6FD0082F0FA /* sv_effect_reverse.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3F242C882123D6FD0082F0FA /* sv_effect_reverse.gif */; };
+		3F242C8E2123D6FD0082F0FA /* sv_effect_repeat.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3F242C892123D6FD0082F0FA /* sv_effect_repeat.gif */; };
+		3F242C8F2123D6FD0082F0FA /* sv_effect_repeat.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3F242C892123D6FD0082F0FA /* sv_effect_repeat.gif */; };
 		3F3DEE4020D902E200C1A28F /* InvocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD0A92B20C52FCF00412448 /* InvocationViewController.m */; };
 		3F3DEE4120D902E200C1A28F /* WCShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD0A55820B80BF200412448 /* WCShareView.m */; };
 		3F3DEE4220D902E200C1A28F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD0A53120B808E300412448 /* main.m */; };
@@ -104,6 +112,10 @@
 		3F1640EA21183C430007ECFA /* MGTVideoTimelineEffectTrack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGTVideoTimelineEffectTrack.m; sourceTree = "<group>"; };
 		3F1640ED21184D4D0007ECFA /* MGTVideoTimelineAudioTrack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGTVideoTimelineAudioTrack.h; sourceTree = "<group>"; };
 		3F1640EE21184D4D0007ECFA /* MGTVideoTimelineAudioTrack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGTVideoTimelineAudioTrack.m; sourceTree = "<group>"; };
+		3F242C842123D4F80082F0FA /* sv_effect_none.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = sv_effect_none.gif; sourceTree = "<group>"; };
+		3F242C872123D6FD0082F0FA /* sv_effect_slow.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = sv_effect_slow.gif; sourceTree = "<group>"; };
+		3F242C882123D6FD0082F0FA /* sv_effect_reverse.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = sv_effect_reverse.gif; sourceTree = "<group>"; };
+		3F242C892123D6FD0082F0FA /* sv_effect_repeat.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = sv_effect_repeat.gif; sourceTree = "<group>"; };
 		3F3DEE5020D902E200C1A28F /* Lab Enterprise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lab Enterprise.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F3DEE5120D902E200C1A28F /* Lab Enterprise-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Lab Enterprise-Info.plist"; path = "/Users/hao/Workspace/lab/Lab Enterprise-Info.plist"; sourceTree = "<absolute>"; };
 		3F83EEB321161231002F3D1B /* MGTVideoEditorPanelOperationBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGTVideoEditorPanelOperationBar.h; sourceTree = "<group>"; };
@@ -211,6 +223,7 @@
 		3F1640A521115C160007ECFA /* shortVideo */ = {
 			isa = PBXGroup;
 			children = (
+				3F242C832123D4F80082F0FA /* resources */,
 				3F1640BE2114630F0007ECFA /* MGTVideoEditorFrame.h */,
 				3F1640BF2114630F0007ECFA /* MGTVideoEditorFrame.m */,
 				3F1640AB211304080007ECFA /* MGTVideoEditorController.h */,
@@ -246,6 +259,17 @@
 				3F1640B8211321520007ECFA /* UIResponder+LabAddition.m */,
 			);
 			path = categories;
+			sourceTree = "<group>";
+		};
+		3F242C832123D4F80082F0FA /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				3F242C892123D6FD0082F0FA /* sv_effect_repeat.gif */,
+				3F242C882123D6FD0082F0FA /* sv_effect_reverse.gif */,
+				3F242C872123D6FD0082F0FA /* sv_effect_slow.gif */,
+				3F242C842123D4F80082F0FA /* sv_effect_none.gif */,
+			);
+			path = resources;
 			sourceTree = "<group>";
 		};
 		3FD0A51620B808E300412448 = {
@@ -467,7 +491,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F3DEE4A20D902E200C1A28F /* Launch Screen.storyboard in Resources */,
+				3F242C862123D4F80082F0FA /* sv_effect_none.gif in Resources */,
 				3F3DEE4B20D902E200C1A28F /* Assets.xcassets in Resources */,
+				3F242C8F2123D6FD0082F0FA /* sv_effect_repeat.gif in Resources */,
+				3F242C8B2123D6FD0082F0FA /* sv_effect_slow.gif in Resources */,
+				3F242C8D2123D6FD0082F0FA /* sv_effect_reverse.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,7 +504,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FD0A56220B8199E00412448 /* Launch Screen.storyboard in Resources */,
+				3F242C852123D4F80082F0FA /* sv_effect_none.gif in Resources */,
 				3FD0A52C20B808E300412448 /* Assets.xcassets in Resources */,
+				3F242C8E2123D6FD0082F0FA /* sv_effect_repeat.gif in Resources */,
+				3F242C8A2123D6FD0082F0FA /* sv_effect_slow.gif in Resources */,
+				3F242C8C2123D6FD0082F0FA /* sv_effect_reverse.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,4 +9,5 @@ target 'Lab' do
   pod 'AFNetworking'
   pod 'MGTCategories'
   pod 'MBProgressHUD'
+  pod 'SDWebImage'
 end
